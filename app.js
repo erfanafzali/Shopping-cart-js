@@ -1,4 +1,4 @@
-//ge data products ==> products.js
+//get data products ==> products.js
 import { productsData } from "./products.js";
 
 //Selectors
@@ -6,7 +6,7 @@ const shopCartIcon = document.querySelector(".shop-carts");
 const cartPopupCart = document.querySelector(".cart");
 const backDrop = document.querySelector(".backdrop");
 const clearCartBtn = document.querySelector(".clear-cart");
-const confirmCartBtn = document.querySelector(".cart-item-confirm");
+// const confirmCartBtn = document.querySelector(".cart-item-confirm");
 const productsDOM = document.querySelector(".product-container");
 const cartTotal = document.querySelector(".cart-total");
 const cartItemsBadge = document.querySelector(".cart-items-badge");
@@ -131,7 +131,7 @@ class UI {
       tempCartItems += curr.quantity; //2 + 1 => 3
       return curr.quantity * curr.price + acc;
     }, 0);
-    //invoke 2number aeshar==> tofixed(2)
+  
     cartTotal.innerText = `total price : ${totalPriceCart.toFixed(2)}$`;
     cartItemsBadge.innerText = tempCartItems;
   }
